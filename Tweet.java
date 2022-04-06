@@ -25,7 +25,6 @@ public class Tweet {
 
   public ArrayList<String> getWords() {
     String str = content.replaceAll("[^A-Za-z\\s]+", "");
-    System.out.println(str);
     String[] newStr = str.split("\\s+");
     ArrayList<String> words = new ArrayList<>(Arrays.asList(newStr));
     return words;

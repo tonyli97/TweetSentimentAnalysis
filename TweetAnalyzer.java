@@ -47,6 +47,8 @@ public class TweetAnalyzer {
         total += sentiment;
       }
     }
+//    System.out.println(count);
+//    System.out.println(total);
     return count == 0 ? null : (Double) total/count;
   }
 
@@ -73,13 +75,15 @@ public class TweetAnalyzer {
        count += 1;
        total += sentiment;
      }
-     if (count == 0) {
-       System.out.println("No tweets with sentiment");
-     } else {
-       System.out.println("Average sentiment over " + count + " tweets: "
-           + roundedString(total/count));
-     }
    }
+    System.out.println(count);
+    System.out.println(total);
+    if (count == 0) {
+      System.out.println("No tweets with sentiment");
+    } else {
+      System.out.println("Average sentiment over " + count + " tweets: "
+          + roundedString(total/count));
+    }
 
   }
 
@@ -105,12 +109,12 @@ public class TweetAnalyzer {
         count += 1;
         total += sentiment;
       }
-      if (count == 0) {
-        System.out.println("No tweets with sentiment");
-      } else {
-        System.out.println("Average sentiment over " + count + " tweets: "
-            + roundedString(total/count));
-      }
+    }
+    if (count == 0) {
+      System.out.println("No tweets with sentiment");
+    } else {
+      System.out.println("Average sentiment over " + count + " tweets: "
+          + roundedString(total/count));
     }
   }
 
